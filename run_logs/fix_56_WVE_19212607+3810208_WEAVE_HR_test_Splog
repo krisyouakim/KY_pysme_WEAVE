@@ -1,0 +1,921 @@
+2021-09-21 22:39:21,316 - DEBUG - pysme.util - ----------------------
+2021-09-21 22:39:21,317 - DEBUG - pysme.util - Python version: 3.8.6
+2021-09-21 22:39:21,317 - DEBUG - pysme.util - SME CLib version: SME Library version: 6.03, July 2019, linux
+2021-09-21 22:39:21,317 - DEBUG - pysme.util - PySME version: 0+unknown
+2021-09-21 22:39:21,317 - DEBUG - pysme.util - Numpy version: 1.19.4
+2021-09-21 22:39:21,317 - DEBUG - pysme.util - Scipy version: 1.5.4
+2021-09-21 22:39:21,317 - DEBUG - pysme.util - Pandas version: 1.1.5
+2021-09-21 22:39:21,342 - CRITICAL - pysme.synthesize - Don't forget to cite your sources. Use sme.citation()
+2021-09-21 22:39:23,547 - INFO - pysme.solve - Fitting Spectrum with Parameters: TEFF,GRAV,MONH,VSINI
+2021-09-21 22:39:23,548 - DEBUG - pysme.solve - Initial values: [4139.937896487071, 0.693403167625602, -0.3811578509345005, 0.11368849527592323]
+2021-09-21 22:39:23,549 - DEBUG - pysme.solve - Bounds: [[ 2.50000000e+03 -5.00000000e-01 -5.00000000e+00  0.00000000e+00]
+ [ 8.00000000e+03             inf             inf  2.99792458e+05]]
+2021-09-21 22:39:23,551 - WARNING - pysme.solve - The linelist extends far beyond the requested wavelength range. This will slow down the calculation, consider using only relevant lines
+2021-09-21 22:39:23,552 - WARNING - pysme.solve - Wavelength range: 6480.033184295514 - 6500.486287546583 Å ; Linelist range: 6481.8694 - 6562.797 Å
+2021-09-21 22:39:23,554 - DEBUG - pysme.sme_synth - Passing linelist to smelib
+2021-09-21 22:39:23,556 - DEBUG - pysme.synthesize - Synthesize spectrum
+2021-09-21 22:39:23,556 - DEBUG - pysme.synthesize - SME_Structure(citation_info='\n            @ARTICLE{2017A&A...597A..16P,\n                author = {{Piskunov}, Nikolai and {Valenti}, Jeff A.},\n                title = "{Spectroscopy Made Easy: Evolution}",\n                journal = {\\aap},\n                keywords = {stars: abundances, radiative transfer, stars: fundamental parameters, stars: atmospheres, techniques: spectroscopic, Astrophysics - Instrumentation and Methods for Astrophysics, Astrophysics - Solar and Stellar Astrophysics},\n                year = "2017",\n                month = "Jan",\n                volume = {597},\n                eid = {A16},\n                pages = {A16},\n                doi = {10.1051/0004-6361/201629124},\n                archivePrefix = {arXiv},\n                eprint = {1606.06073},\n                primaryClass = {astro-ph.IM},\n                adsurl = {https://ui.adsabs.harvard.edu/abs/2017A&A...597A..16P},\n                adsnote = {Provided by the SAO/NASA Astrophysics Data System}\n            }\n            @ARTICLE{1996A&AS..118..595V,\n                author = {{Valenti}, J.~A. and {Piskunov}, N.},\n                title = "{Spectroscopy made easy: A new tool for fitting observations with synthetic spectra.}",\n                journal = {\\aaps},\n                keywords = {RADIATIVE TRANSFER, METHODS: NUMERICAL, TECHNIQUES: SPECTROSCOPIC, STARS: FUNDAMENTAL PARAMETERS, SUN: FUNDAMENTAL PARAMETERS, ATOMIC DATA},\n                year = "1996",\n                month = "Sep",\n                volume = {118},\n                pages = {595-603},\n                adsurl = {https://ui.adsabs.harvard.edu/abs/1996A&AS..118..595V},\n                adsnote = {Provided by the SAO/NASA Astrophysics Data System}\n            }\n            ',
+teff=4139.937896487071,
+logg=0.693403167625602,
+abund= [M/H]=-0.381 applied to abundance pattern. Values below are abundances.
+  H      He     Li     Be     B      C      N      O      F      Ne     Na   
+ 12.000 10.930  0.669  0.999  2.319  8.009  7.399  8.279  4.179  7.459  5.789
+  Mg     Al     Si     P      S      Cl     Ar     K      Ca     Sc     Ti   
+  7.149  5.989  7.129  4.979  6.759  5.119  5.799  4.699  5.929  2.789  4.519
+  V      Cr     Mn     Fe     Co     Ni     Cu     Zn     Ga     Ge     As   
+  3.619  5.259  5.009  7.069  4.539  5.849  3.829  4.219  2.499  3.199  1.909
+  Se     Br     Kr     Rb     Sr     Y      Zr     Nb     Mo     Tc     Ru   
+  2.949  2.179  2.869  2.219  2.539  1.829  2.199  1.039  1.539 -8.381  1.459
+  Rh     Pd     Ag     Cd     In     Sn     Sb     Te     I      Xe     Cs   
+  0.739  1.279  0.559  1.389  1.219  1.619  0.619  1.809  1.129  1.859  0.689
+  Ba     La     Ce     Pr     Nd     Pm     Sm     Eu     Gd     Tb     Dy   
+  1.789  0.749  1.319  0.199  1.069 -8.381  0.619  0.139  0.729 -0.101  0.759
+  Ho     Er     Tm     Yb     Lu     Hf     Ta     W      Re     Os     Ir   
+  0.129  0.549 -0.381  0.699 -0.321  0.499 -0.551  0.729 -0.151  0.869  0.999
+  Pt     Au     Hg     Tl     Pb     Bi     Po     At     Rn     Fr     Ra   
+  1.259  0.629  0.749  0.519  1.619  0.269 -8.381 -8.381 -8.381 -8.381 -8.381
+  Ac     Th     Pa     U      Np     Pu     Am     Cm     Bk     Cf     Es   
+ -8.381 -0.321  7.619 -0.901 -8.381 -8.381 -8.381 -8.381 -8.381 -8.381 -8.381,
+vmic=0.29011,
+vmac=0,
+vsini=0.11368849527592323,
+id='2021-09-21',
+meta={'object': ''},
+version='0+unknown',
+vrad_flag='fix',
+vrad=array([0., 0.]),
+cscale_flag='none',
+cscale_type='mask',
+cscale=array([[1.],
+       [1.]]),
+normalize_by_continuum=True,
+specific_intensities_only=False,
+gam6=1.0,
+h2broad=True,
+accwi=1e-07,
+accrt=0.001,
+iptype='gauss',
+ipres=array([23661.87832698, 23712.06545067]),
+ip_x=None,
+ip_y=None,
+mu=array([0.96362411, 0.88640526, 0.80178373, 0.70710678, 0.5976143 ,
+       0.46291005, 0.26726124]),
+wran=array([[6480.0331843 , 6485.48401132],
+       [6492.53508115, 6500.48628755]]),
+wave=Iliffe_vector([110 160], [array([6480.0331843 , 6480.08319188, 6480.13319947, ..., 6485.38399615,
+       6485.43400374, 6485.48401132]), array([6492.53508115, 6492.58508874, 6492.63509632, ..., 6500.38627237,
+       6500.43627996, 6500.48628755])]),
+spec=Iliffe_vector([110 160], [array([1.01391062, 1.00200407, 0.99302678, ..., 0.9969806 , 1.05794136,
+       1.05831752]), array([1.03620546, 1.00628614, 0.99095558, ..., 1.01090084, 1.00609751,
+       1.0153457 ])]),
+uncs=Iliffe_vector([110 160], [array([0.0270177 , 0.0269412 , 0.02687879, ..., 0.02693063, 0.02783868,
+       0.02784257], dtype=float32), array([0.02767733, 0.02726522, 0.02704346, ..., 0.02658696, 0.02653045,
+       0.0266656 ], dtype=float32)]),
+telluric=None,
+mask=Iliffe_vector([110 160], [array([0., 0., 0., ..., 0., 0., 0.]), array([0., 0., 0., ..., 0., 0., 0.])]),
+synth=None,
+cont=None,
+linelist=       species     wlcent  gflog  ...  error  atom_number  ionization
+262499    Fe 1  6481.8694 -2.984  ...   0.07          1.0         1.0
+262599    Ni 1  6482.7244 -4.663  ...   0.70          1.0         1.0
+262604    Ni 1  6482.7546 -4.069  ...   0.70          1.0         1.0
+262607    Ni 1  6482.7673 -4.573  ...   0.70          1.0         1.0
+264012    Fe 1  6494.4977 -1.457  ...   0.50          1.0         1.0
+264059    Fe 1  6494.9800 -1.273  ...   0.07          1.0         1.0
+264137    Fe 1  6495.7409 -0.940  ...   0.25          1.0         1.0
+264450    Ba 1  6498.7570  0.580  ...   0.50          1.0         1.0
+264472    Fe 1  6498.9379 -4.699  ...   0.07          1.0         1.0
+264549    Ca 1  6499.6500 -0.818  ...   0.50          1.0         1.0
+271327     H 1  6562.7970  0.710  ...   0.50          1.0         1.0
+
+[11 rows x 20 columns],
+fitparameters=['TEFF', 'GRAV', 'MONH', 'VSINI'],
+fitresults=Fitresults(citation_info='',
+maxiter=5,
+chisq=0,
+parameters=None,
+values=None,
+uncertainties=None,
+covariance=None,
+gradient=None,
+derivative=None,
+residuals=None,
+fit_uncertainties=None),
+atmo=Atmosphere(teff=5770.0,
+logg=4.0,
+abund= [M/H]=0.000 applied to abundance pattern. Values below are abundances.
+  H      He     Li     Be     B      C      N      O      F      Ne     Na   
+  0.000    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan
+  Mg     Al     Si     P      S      Cl     Ar     K      Ca     Sc     Ti   
+    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan
+  V      Cr     Mn     Fe     Co     Ni     Cu     Zn     Ga     Ge     As   
+    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan
+  Se     Br     Kr     Rb     Sr     Y      Zr     Nb     Mo     Tc     Ru   
+    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan
+  Rh     Pd     Ag     Cd     In     Sn     Sb     Te     I      Xe     Cs   
+    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan
+  Ba     La     Ce     Pr     Nd     Pm     Sm     Eu     Gd     Tb     Dy   
+    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan
+  Ho     Er     Tm     Yb     Lu     Hf     Ta     W      Re     Os     Ir   
+    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan
+  Pt     Au     Hg     Tl     Pb     Bi     Po     At     Rn     Fr     Ra   
+    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan
+  Ac     Th     Pa     U      Np     Pu     Am     Cm     Bk     Cf     Es   
+    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan,
+vturb=0,
+lonh=0.0,
+source='marcs2014.sav',
+method='grid',
+geom='SPH',
+radius=0.0,
+height=None,
+opflag=array([1, 1, 1, ..., 0, 0, 0]),
+wlstd=5000.0,
+depth='RHOX',
+interp='TAU',
+rhox=None,
+tau=None,
+temp=None,
+rho=None,
+xna=None,
+xne=None,
+citation_info=''),
+nlte=NLTE(citation_info='',
+elements=[],
+grids={},
+subgrid_size=array([2, 2, 2, 2]),
+flags=None,
+solar=None,
+abund_format='H=12',
+selection='energy',
+min_energy_diff=None),
+system_info=Version(citation_info='',
+arch='',
+os='',
+os_family='',
+os_name='',
+release='',
+build_date='',
+memory_bits=64,
+host=''))
+2021-09-21 22:39:25,974 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:39:25,975 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:39:25,975 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:39:26,553 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:39:26,553 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:39:26,554 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:39:26,560 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:27,383 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:27,387 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:27,389 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:39:27,414 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:28,954 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:28,958 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:28,961 - DEBUG - pysme.synthesize - Radial velocity: [0. 0.]
+2021-09-21 22:39:28,961 - DEBUG - pysme.synthesize - Continuum coefficients: [[1.]
+ [1.]]
+2021-09-21 22:39:28,963 - DEBUG - pysme.solve - {'teff': 4139.937896487071, 'logg': 0.693403167625602, 'monh': -0.3811578509345005, 'vsini': 0.11368849527592323}
+2021-09-21 22:39:29,151 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:39:29,152 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:39:29,152 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:39:29,726 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:39:29,726 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:39:29,727 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:39:29,729 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:30,516 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:30,519 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:30,521 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:39:30,523 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:32,061 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:32,064 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:32,247 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:39:32,248 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:39:32,248 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:39:32,824 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:39:32,825 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:39:32,825 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:39:32,827 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:33,614 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:33,617 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:33,619 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:39:33,622 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:35,163 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:35,167 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:35,355 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:39:35,356 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:39:35,356 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:39:35,930 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:39:35,931 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:39:35,931 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:39:35,933 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:36,720 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:36,723 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:36,725 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:39:36,727 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:38,263 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:38,267 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:38,451 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:39:38,452 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:39:38,452 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:39:39,025 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:39:39,026 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:39:39,026 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:39:39,028 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:39,815 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:39,819 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:39,820 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:39:39,823 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:41,359 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:41,363 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:41,546 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:39:41,547 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:39:41,547 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:39:42,121 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:39:42,122 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:39:42,122 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:39:42,124 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:42,910 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:42,914 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:42,916 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:39:42,918 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:44,458 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:44,462 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:44,651 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:39:44,652 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:39:44,652 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:39:45,227 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:39:45,227 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:39:45,227 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:39:45,230 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:46,024 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:46,027 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:46,029 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:39:46,032 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:47,573 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:47,576 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:47,776 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:39:47,777 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:39:47,777 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:39:48,350 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:39:48,350 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:39:48,351 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:39:48,353 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:49,139 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:49,143 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:49,145 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:39:49,147 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:50,684 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:50,687 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:50,871 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:39:50,871 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:39:50,872 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:39:51,445 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:39:51,446 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:39:51,446 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:39:51,449 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:52,236 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:52,239 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:52,241 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:39:52,243 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:53,780 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:53,783 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:53,786 - INFO - pysme.util -    Iteration     Total nfev        Cost      Cost reduction    Step norm     Optimality   
+2021-09-21 22:39:53,787 - INFO - pysme.util -        0              1         1.0969e+02                                    1.12e+02    
+2021-09-21 22:39:53,982 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:39:53,983 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:39:53,983 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:39:54,571 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:39:54,571 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:39:54,571 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:39:54,588 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:55,718 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:55,721 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:55,723 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:39:55,733 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:57,422 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:57,425 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:57,428 - DEBUG - pysme.synthesize - Radial velocity: [0. 0.]
+2021-09-21 22:39:57,428 - DEBUG - pysme.synthesize - Continuum coefficients: [[1.]
+ [1.]]
+2021-09-21 22:39:57,429 - DEBUG - pysme.solve - {'teff': 4292.432667173247, 'logg': 0.6862550108929786, 'monh': 0.6328441158422281, 'vsini': 0.11368849527592323}
+2021-09-21 22:39:57,626 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:39:57,627 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:39:57,627 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:39:58,214 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:39:58,215 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:39:58,215 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:39:58,217 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:39:59,298 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:39:59,302 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:39:59,304 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:39:59,306 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:00,998 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:01,002 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:01,206 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:01,206 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:01,207 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:01,796 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:01,796 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:01,797 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:01,799 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:02,880 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:02,884 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:02,886 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:02,888 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:04,577 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:04,581 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:04,778 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:04,779 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:04,779 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:05,366 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:05,366 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:05,366 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:05,368 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:06,449 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:06,453 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:06,455 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:06,457 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:08,145 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:08,149 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:08,345 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:08,346 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:08,346 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:08,937 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:08,937 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:08,938 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:08,940 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:10,021 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:10,025 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:10,026 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:10,029 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:11,717 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:11,721 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:11,920 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:11,921 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:11,921 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:12,508 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:12,509 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:12,509 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:12,511 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:13,592 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:13,596 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:13,598 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:13,600 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:15,287 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:15,291 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:15,489 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:15,490 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:15,490 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:16,077 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:16,077 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:16,077 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:16,080 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:17,160 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:17,164 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:17,166 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:17,168 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:18,855 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:18,859 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:19,057 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:19,058 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:19,058 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:19,645 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:19,645 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:19,646 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:19,648 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:20,729 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:20,732 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:20,734 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:20,737 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:22,425 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:22,428 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:22,627 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:22,628 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:22,628 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:23,216 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:23,217 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:23,217 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:23,219 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:24,305 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:24,308 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:24,311 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:24,313 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:26,000 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:26,004 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:26,007 - INFO - pysme.util -        1              2         9.3441e+01      1.63e+01       1.52e+02       2.03e+02    
+2021-09-21 22:40:26,016 - INFO - pysme.atmosphere.interpolation - interp_atmo_grid: requested log(g) (4.177) larger than max grid value (3.500). extrapolating.
+2021-09-21 22:40:26,018 - INFO - pysme.atmosphere.interpolation - interp_atmo_grid: requested log(g) (4.177) larger than max grid value (3.500). extrapolating.
+2021-09-21 22:40:26,207 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:26,208 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:26,208 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:27,702 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:27,703 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:27,703 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:27,720 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:29,217 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:29,220 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:29,222 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:29,231 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:30,924 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:30,927 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:30,930 - DEBUG - pysme.synthesize - Radial velocity: [0. 0.]
+2021-09-21 22:40:30,930 - DEBUG - pysme.synthesize - Continuum coefficients: [[1.]
+ [1.]]
+2021-09-21 22:40:30,931 - DEBUG - pysme.solve - {'teff': 3314.61795484446, 'logg': 4.17694122172386, 'monh': 0.6318940221239252, 'vsini': 0.11368849527592323}
+2021-09-21 22:40:31,122 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:31,123 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:31,123 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:31,684 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:31,685 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:31,685 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:31,694 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:32,680 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:32,683 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:32,685 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:32,694 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:34,397 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:34,401 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:34,404 - DEBUG - pysme.synthesize - Radial velocity: [0. 0.]
+2021-09-21 22:40:34,404 - DEBUG - pysme.synthesize - Continuum coefficients: [[1.]
+ [1.]]
+2021-09-21 22:40:34,405 - DEBUG - pysme.solve - {'teff': 3774.6543544796423, 'logg': 1.4931696181390508, 'monh': 0.13286312791085364, 'vsini': 0.11368849527592323}
+2021-09-21 22:40:34,596 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:34,597 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:34,597 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:35,158 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:35,158 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:35,158 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:35,161 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:36,100 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:36,103 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:36,105 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:36,108 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:37,806 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:37,809 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:38,003 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:38,004 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:38,004 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:38,568 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:38,569 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:38,569 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:38,571 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:39,511 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:39,514 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:39,516 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:39,518 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:41,216 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:41,220 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:41,414 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:41,414 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:41,415 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:41,976 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:41,977 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:41,977 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:41,979 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:42,919 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:42,922 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:42,924 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:42,926 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:44,624 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:44,628 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:44,821 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:44,822 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:44,822 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:45,386 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:45,386 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:45,386 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:45,389 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:46,324 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:46,327 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:46,329 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:46,332 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:47,990 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:47,993 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:48,181 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:48,181 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:48,181 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:48,739 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:48,739 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:48,739 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:48,741 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:49,664 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:49,667 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:49,669 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:49,672 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:51,327 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:51,330 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:51,523 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:51,524 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:51,524 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:52,076 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:52,076 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:52,077 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:52,079 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:52,989 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:52,992 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:52,994 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:52,996 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:54,650 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:54,654 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:54,842 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:54,842 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:54,843 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:55,389 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:55,389 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:55,390 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:55,392 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:56,291 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:56,294 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:56,296 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:56,299 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:57,915 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:57,918 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:58,104 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:40:58,105 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:40:58,105 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:40:58,635 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:40:58,635 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:40:58,635 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:40:58,637 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:40:59,528 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:40:59,531 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:40:59,533 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:40:59,535 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:01,148 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:01,151 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:01,154 - INFO - pysme.util -        2              4         8.6594e+01      6.85e+00       5.18e+02       4.07e+01    
+2021-09-21 22:41:01,347 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:01,347 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:01,348 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:02,472 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:02,472 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:02,473 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:02,491 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:03,474 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:03,477 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:03,479 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:03,488 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:05,018 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:05,022 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:05,024 - DEBUG - pysme.synthesize - Radial velocity: [0. 0.]
+2021-09-21 22:41:05,025 - DEBUG - pysme.synthesize - Continuum coefficients: [[1.]
+ [1.]]
+2021-09-21 22:41:05,026 - DEBUG - pysme.solve - {'teff': 3192.190240196607, 'logg': 0.4869548995498554, 'monh': 0.29860568394517045, 'vsini': 0.11368849527592323}
+2021-09-21 22:41:05,217 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:05,217 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:05,218 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:06,325 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:06,325 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:06,325 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:06,327 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:07,272 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:07,275 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:07,277 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:07,279 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:08,819 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:08,822 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:09,012 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:09,013 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:09,013 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:10,125 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:10,126 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:10,126 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:10,128 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:11,071 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:11,075 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:11,076 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:11,079 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:12,619 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:12,622 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:12,812 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:12,812 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:12,813 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:13,917 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:13,917 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:13,917 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:13,919 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:14,863 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:14,867 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:14,869 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:14,871 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:16,407 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:16,410 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:16,602 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:16,602 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:16,602 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:17,707 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:17,707 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:17,708 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:17,710 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:18,644 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:18,647 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:18,649 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:18,651 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:20,177 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:20,181 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:20,369 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:20,369 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:20,369 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:21,477 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:21,477 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:21,477 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:21,480 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:22,438 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:22,441 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:22,443 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:22,445 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:23,948 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:23,951 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:24,135 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:24,135 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:24,136 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:25,201 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:25,202 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:25,202 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:25,204 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:26,112 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:26,116 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:26,117 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:26,119 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:27,635 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:27,638 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:27,829 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:27,829 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:27,829 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:28,908 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:28,908 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:28,909 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:28,911 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:29,791 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:29,794 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:29,795 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:29,797 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:31,265 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:31,268 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:31,445 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:31,446 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:31,446 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:32,472 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:32,472 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:32,473 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:32,475 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:33,346 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:33,349 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:33,351 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:33,353 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:34,779 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:34,782 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:34,784 - INFO - pysme.util -        3              5         6.9509e+01      1.71e+01       5.82e+02       8.71e+01    
+2021-09-21 22:41:34,784 - INFO - pysme.util - The maximum number of function evaluations is exceeded.
+2021-09-21 22:41:34,785 - INFO - pysme.util - Function evaluations 5, initial cost 1.0969e+02, final cost 6.9509e+01, first-order optimality 8.71e+01.
+2021-09-21 22:41:34,800 - DEBUG - pysme.solve - teff: -142.4839640614555, 343.93158722683836
+2021-09-21 22:41:34,816 - DEBUG - pysme.solve - logg: 0.1912018179357007, 0.6207363313092327
+2021-09-21 22:41:34,825 - DEBUG - pysme.solve - monh: -0.20608451610945133, 0.4124244509944671
+2021-09-21 22:41:34,825 - WARNING - pysme.solve - Not enough data points with a suitable derivative to determine the uncertainties of vsini
+2021-09-21 22:41:34,826 - DEBUG - pysme.solve - Reduced chi square: 0.523
+2021-09-21 22:41:34,826 - INFO - pysme.solve - teff      	3192.19024 +- 343.93
+2021-09-21 22:41:34,826 - INFO - pysme.solve - logg      	0.48695 +- 0.62074
+2021-09-21 22:41:34,827 - INFO - pysme.solve - monh      	0.29861 +- 0.41242
+2021-09-21 22:41:34,827 - INFO - pysme.solve - vsini     	0.11369 +- 0
+2021-09-21 22:41:34,827 - INFO - pysme.solve - v_rad     	[0. 0.] +- [[0. 0.]
+ [0. 0.]]
+tinuum coefficients: [[1.]
+ [1.]]
+2021-09-21 22:41:05,026 - DEBUG - pysme.solve - {'teff': 3192.190240196607, 'logg': 0.4869548995498554, 'monh': 0.29860568394517045, 'vsini': 0.11368849527592323}
+2021-09-21 22:41:05,217 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:05,217 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:05,218 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:06,325 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:06,325 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:06,325 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:06,327 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:07,272 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:07,275 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:07,277 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:07,279 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:08,819 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:08,822 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:09,012 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:09,013 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:09,013 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:10,125 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:10,126 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:10,126 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:10,128 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:11,071 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:11,075 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:11,076 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:11,079 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:12,619 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:12,622 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:12,812 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:12,812 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:12,813 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:13,917 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:13,917 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:13,917 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:13,919 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:14,863 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:14,867 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:14,869 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:14,871 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:16,407 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:16,410 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:16,602 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:16,602 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:16,602 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:17,707 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:17,707 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:17,708 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:17,710 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:18,644 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:18,647 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:18,649 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:18,651 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:20,177 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:20,181 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:20,369 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:20,369 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:20,369 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:21,477 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:21,477 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:21,477 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:21,480 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:22,438 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:22,441 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:22,443 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:22,445 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:23,948 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:23,951 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:24,135 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:24,135 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:24,136 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:25,201 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:25,202 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:25,202 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:25,204 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:26,112 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:26,116 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:26,117 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:26,119 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:27,635 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:27,638 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:27,829 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:27,829 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:27,829 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:28,908 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:28,908 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:28,909 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:28,911 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:29,791 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:29,794 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:29,795 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:29,797 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:31,265 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:31,268 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:31,445 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:31,446 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:31,446 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:32,472 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:32,472 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:32,473 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:32,475 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:33,346 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:33,349 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:33,351 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:33,353 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:34,779 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:34,782 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:34,784 - INFO - pysme.util -        3              5         6.9509e+01      1.71e+01       5.82e+02       8.71e+01    
+2021-09-21 22:41:34,784 - INFO - pysme.util - The maximum number of function evaluations is exceeded.
+2021-09-21 22:41:34,785 - INFO - pysme.util - Function evaluations 5, initial cost 1.0969e+02, final cost 6.9509e+01, first-order optimality 8.71e+01.
+2021-09-21 22:41:34,800 - DEBUG - pysme.solve - teff: -142.4839640614555, 343.93158722683836
+2021-09-21 22:41:34,816 - DEBUG - pysme.solve - logg: 0.1912018179357007, 0.6207363313092327
+2021-09-21 22:41:34,825 - DEBUG - pysme.solve - monh: -0.20608451610945133, 0.4124244509944671
+2021-09-21 22:41:34,825 - WARNING - pysme.solve - Not enough data points with a suitable derivative to determine the uncertainties of vsini
+2021-09-21 22:41:34,826 - DEBUG - pysme.solve - Reduced chi square: 0.523
+2021-09-21 22:41:34,826 - INFO - pysme.solve - teff      	3192.19024 +- 343.93
+2021-09-21 22:41:34,826 - INFO - pysme.solve - logg      	0.48695 +- 0.62074
+2021-09-21 22:41:34,827 - INFO - pysme.solve - monh      	0.29861 +- 0.41242
+2021-09-21 22:41:34,827 - INFO - pysme.solve - vsini     	0.11369 +- 0
+2021-09-21 22:41:34,827 - INFO - pysme.solve - v_rad     	[0. 0.] +- [[0. 0.]
+ [0. 0.]]
+DEBUG - pysme.solve - {'teff': 3192.190240196607, 'logg': 0.4869548995498554, 'monh': 0.29860568394517045, 'vsini': 0.11368849527592323}
+2021-09-21 22:41:05,217 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:05,217 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:05,218 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:06,325 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:06,325 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:06,325 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:06,327 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:07,272 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:07,275 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:07,277 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:07,279 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:08,819 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:08,822 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:09,012 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:09,013 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:09,013 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:10,125 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:10,126 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:10,126 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:10,128 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:11,071 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:11,075 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:11,076 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:11,079 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:12,619 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:12,622 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:12,812 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:12,812 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:12,813 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:13,917 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:13,917 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:13,917 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:13,919 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:14,863 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:14,867 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:14,869 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:14,871 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:16,407 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:16,410 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:16,602 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:16,602 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:16,602 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:17,707 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:17,707 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:17,708 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:17,710 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:18,644 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:18,647 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:18,649 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:18,651 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:20,177 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:20,181 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:20,369 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:20,369 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:20,369 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:21,477 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:21,477 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:21,477 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:21,480 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:22,438 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:22,441 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:22,443 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:22,445 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:23,948 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:23,951 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:24,135 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:24,135 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:24,136 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:25,201 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:25,202 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:25,202 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:25,204 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:26,112 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:26,116 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:26,117 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:26,119 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:27,635 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:27,638 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:27,829 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:27,829 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:27,829 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:28,908 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:28,908 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:28,909 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:28,911 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:29,791 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:29,794 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:29,795 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:29,797 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:31,265 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:31,268 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:31,445 - DEBUG - pysme.sme_synth - Inputing atmosphere model to smelib
+2021-09-21 22:41:31,446 - DEBUG - pysme.sme_synth - Inputing abundances to smelib
+2021-09-21 22:41:31,446 - DEBUG - pysme.sme_synth - Calculating ionization in smelib
+2021-09-21 22:41:32,472 - DEBUG - pysme.sme_synth - Setting Van der Waals scale in smelib
+2021-09-21 22:41:32,472 - DEBUG - pysme.sme_synth - Setting H2 broadening in smelib
+2021-09-21 22:41:32,473 - DEBUG - pysme.synthesize - Segment 0 out of 2
+2021-09-21 22:41:32,475 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:33,346 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:33,349 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:33,351 - DEBUG - pysme.synthesize - Segment 1 out of 2
+2021-09-21 22:41:33,353 - DEBUG - pysme.sme_synth - Starting radiative Transfer calculations in smelib
+2021-09-21 22:41:34,779 - DEBUG - pysme.synthesize - Integrate specific intensities
+2021-09-21 22:41:34,782 - DEBUG - pysme.synthesize - Apply detector broadening
+2021-09-21 22:41:34,784 - INFO - pysme.util -        3              5         6.9509e+01      1.71e+01       5.82e+02       8.71e+01    
+2021-09-21 22:41:34,784 - INFO - pysme.util - The maximum number of function evaluations is exceeded.
+2021-09-21 22:41:34,785 - INFO - pysme.util - Function evaluations 5, initial cost 1.0969e+02, final cost 6.9509e+01, first-order optimality 8.71e+01.
+2021-09-21 22:41:34,800 - DEBUG - pysme.solve - teff: -142.4839640614555, 343.93158722683836
+2021-09-21 22:41:34,816 - DEBUG - pysme.solve - logg: 0.1912018179357007, 0.6207363313092327
+2021-09-21 22:41:34,825 - DEBUG - pysme.solve - monh: -0.20608451610945133, 0.4124244509944671
+2021-09-21 22:41:34,825 - WARNING - pysme.solve - Not enough data points with a suitable derivative to determine the uncertainties of vsini
+2021-09-21 22:41:34,826 - DEBUG - pysme.solve - Reduced chi square: 0.523
+2021-09-21 22:41:34,826 - INFO - pysme.solve - teff      	3192.19024 +- 343.93
+2021-09-21 22:41:34,826 - INFO - pysme.solve - logg      	0.48695 +- 0.62074
+2021-09-21 22:41:34,827 - INFO - pysme.solve - monh      	0.29861 +- 0.41242
+2021-09-21 22:41:34,827 - INFO - pysme.solve - vsini     	0.11369 +- 0
+2021-09-21 22:41:34,827 - INFO - pysme.solve - v_rad     	[0. 0.] +- [[0. 0.]
+ [0. 0.]]
